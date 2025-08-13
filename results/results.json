@@ -1,0 +1,150 @@
+{
+  "config": {
+    "configFile": "/Users/satyashu/Playwright_POC_Automation/playwright.config.ts",
+    "rootDir": "/Users/satyashu/Playwright_POC_Automation/test",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/satyashu/Playwright_POC_Automation/src/helpers/globalSetup.ts",
+    "globalTeardown": "/Users/satyashu/Playwright_POC_Automation/src/helpers/globalTeardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "results/html",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results/results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/satyashu/Playwright_POC_Automation/results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Desktop Chrome",
+        "name": "Desktop Chrome",
+        "testDir": "/Users/satyashu/Playwright_POC_Automation/test",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.2",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "sample.spec.ts",
+      "file": "sample.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Sample UI Test",
+          "file": "sample.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should validate page title",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Chrome",
+                  "projectName": "Desktop Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35024,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/satyashu/Playwright_POC_Automation/test/sample.spec.ts",
+                            "column": 16,
+                            "line": 13
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://test.example.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   test(\u001b[32m'should validate page title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m\u001b[33m!\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Welcome/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/satyashu/Playwright_POC_Automation/test/sample.spec.ts:13:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-13T19:09:02.281Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b92766bcf73bd5c029a8-4b48ce64803e414985b1",
+              "file": "sample.spec.ts",
+              "line": 12,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-13T19:09:01.997Z",
+    "duration": 35599.609000000004,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

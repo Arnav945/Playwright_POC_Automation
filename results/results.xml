@@ -1,0 +1,26 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="35.599609">
+<testsuite name="sample.spec.ts" timestamp="2025-08-13T19:09:02.009Z" hostname="Desktop Chrome" tests="1" failures="1" skipped="0" time="35.024" errors="0">
+<testcase name="Sample UI Test › should validate page title" classname="sample.spec.ts" time="35.024">
+<failure message="sample.spec.ts:12:7 should validate page title" type="FAILURE">
+<![CDATA[  [Desktop Chrome] › sample.spec.ts:12:7 › Sample UI Test › should validate page title ─────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "https://test.example.com/", waiting until "load"
+
+
+      11 |
+      12 |   test('should validate page title', async ({ page }) => {
+    > 13 |     await page.goto(process.env.BASE_URL!);
+         |                ^
+      14 |     await expect(page).toHaveTitle(/Welcome/);
+      15 |   });
+      16 |
+        at /Users/satyashu/Playwright_POC_Automation/test/sample.spec.ts:13:16
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
